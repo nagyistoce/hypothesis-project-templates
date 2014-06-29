@@ -1,0 +1,15 @@
+Hypothesis Project Templates
+============================
+
+A series of directories that contain the base setup for various types of
+projects including JavaScript browser packages and Python services.
+
+Each repository should include an example README with appropriate placeholders
+as well as a stub test suite. These are merely suggestions, other tools can
+be used as long as the meet the same requirements.
+
+Contributions
+-------------
+
+This repo was created and maintained by the Hypothesis team, suggestions and
+patches are welcome in the issues.
