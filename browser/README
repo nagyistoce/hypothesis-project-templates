@@ -1,0 +1,126 @@
+Example Project
+===============
+
+The first paragraph should contain information about the project, any associated
+projects. It should also include a short example of why it exists.
+
+Usage
+-----
+
+This module should be installed with npm[1] and built using Browserify[1].
+Installation is as simple as running:
+
+    $ npm install --save example-module
+
+Then it can be loaded using the usual require function.
+
+    var ExampleModule = require('example-module');
+    var exampleModule = new ExampleModule();
+    exampleModule.write('some method call');
+
+To build the package you need to use the browserify command along with
+coffeeify to process the coffeescript.
+
+    $ browserify -t coffeeify main.js -o built.js
+
+[1]: https://www.npmjs.org
+[2]: http://browserify.org
+[3]: https://github.com/jnordberg/coffeeify
+
+Development
+-----------
+
+It's very simple, hack on the code, ensure the lint and tests pass and submit
+a pull request. Rinse and repeat.
+
+To install the developer packages you'll need node and npm installed on your
+machine. Then run:
+
+    $ npm install
+
+To run the linter:
+
+    $ make lint
+
+There is a Makefile which contains common development tasks such as testing
+and linting, you can view the instructions by running:
+
+    $ make help
+
+The code also depends on CoffeeScript[1] and Browserify[2].
+
+[1]: http://coffeescript.org
+[2]: http://browserify.org
+
+Code Style
+----------
+
+EditorConfig is used to ensure your editor is setup to use a consistent code
+style. So check the .editorconfig file for the settings. Plugins[2] can be
+installed for Vim and SublimeText that will automatically ensure the
+correct setting are enabled.
+
+[1]: http://editorconfig.org
+[2]: http://editorconfig.org/#download
+
+Production
+----------
+
+This section is optional and would only apply to a project that is designed
+to be shipped outside of the npm distribution channel.
+
+To produce a concatenated build run:
+
+    $ make build
+
+To produce a development and production (minified) build ready for distribution run:
+
+    $ make package
+
+This will output a `pkg` directory containing the development, production files
+as well as a zip file containing both files and the license. make package will
+also output filesize info for the two files and a minified gzipped example for
+reference.
+
+Testing
+-------
+
+The entire test suite is run on Travis CI on each push you can check the current
+state at any time by visiting: https://travis-ci.org/hypothesis/example
+
+To run the suite locally using phantomjs[1][2] run:
+
+    $ make test
+
+To run only a subset of tests a `grep` variable can be passed to make.
+
+    $ make test grep=build
+
+[1]: http://phantomjs.org
+[2]: https://github.com/metaskills/mocha-phantomjs
+
+### Writing specs
+
+These should be placed in the test/tests directory and the filename should
+be the module name ending with `-test/coffee`. The directory structure should
+mirror the package structure identically.
+
+### Libraries
+
+- Mocha[1]: Test runner, we use the `bdd` style.
+- Chai[2]: Assertion library, we use `assert` style.
+- Sinon[3]: Mocking and stubbing library.
+
+[1]: http://visionmedia.github.com/mocha/
+[2]: http://chaijs.com/api/assert/
+[3]: http://sinonjs.org/docs
+
+Contributors
+------------
+
+Should contain contact information for maintainers, mailing lists etc.
+
+License
+-------
+
+Available under the MIT license. See LICENSE file for details.
